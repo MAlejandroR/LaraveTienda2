@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::view("p", "p");
+/*
 Route::get('/', function () {
     return view('paginas.login');
 })->name("login");
@@ -20,8 +21,8 @@ Route::get('/', function () {
 Route::get('/logged', function () {
     return view('paginas.logged');
 });
-
+*/
 
 Auth::routes();
-
+Route::post("acceso", "Login@acceso")->name('acceso');
 Route::get('/home', 'HomeController@index')->name('home');

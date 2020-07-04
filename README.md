@@ -3,20 +3,29 @@
  [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework) [![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework) [![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework) [![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
 
 ## Introducción
+__LaravelTienda__ es un pequeño proyecto para adentranos en laravel.
+
+Para ello rehacemos la práctica de la _tienda_ usando __laravel__ y vamos especificando requisitos e implementación
+
 ### Herramientas utilizadas
- __pick__ para seleccionar colores https://ubunlog.com/pick-selector-color-ubuntu/
+ * __Pick__ para seleccionar colores https://ubunlog.com/pick-selector-color-ubuntu/
+ * __flex__ documentación [Guía para usar flex](https://css-tricks.com/snippets/css/a-guide-to-flexbox)
+ * __dia__
+ * __git__
+ * __laravel__
+ * __php__
+ * __mysql__
  
-  Documentación de __flex__ https://css-tricks.com/snippets/css/a-guide-to-flexbox/
-  
-   
-
-## LaravelTienda
-
-Rehacemos la práctica de la tienda usando laravel y vamos especificando requisitos e implementación
-
+ 
 ## Creamos el nuevo proyecto
-
- `laravel new LaravelTienda`
+ ```bash
+ laravel new LaravelTienda
+```
+#Contenido o sumary
+* [Diseño de pantallas](./Doc/diseno_pantallas.md)
+* [Creación de la pantallas blade]()
+* [Autentificación o autenticacion]()
+* [Creación de rutas]()
 
 ### Diseño de la interfaz gráfica
 

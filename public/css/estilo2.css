@@ -1,5 +1,7 @@
-.container {
+.container_main {
     border: #1f6fb2 1px;
+    background: #c6c8ca;
+
     padding: 10px;
     display: flex;
     flex-direction: column;

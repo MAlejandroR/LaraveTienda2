@@ -1,4 +1,4 @@
-# DISEÑO\_PANTALLAS
+# DISEÑO DE PANTALLAS
 
  [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework) [![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework) [![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework) [![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
 
@@ -8,7 +8,7 @@ Rehacemos la práctica de la tienda usando laravel y vamos especificando requisi
 
 ## Planteamos el siguiente menú de navegación
 
-![Menú de navegaci&#xF3](./public/imagenes/imagenes_apuntes/diagrama_navegacion.png)
+![Menú de navegaci&#xF3](../public/imagenes/imagenes_apuntes/diagrama_navegacion.png)
 
  En __color rojo__  se representan aquellas pantallas o recursos que requieren estar logueado para acceder a ellas
  En cualquiere de ellas podremos desloguearse
@@ -52,6 +52,7 @@ __A continuación vamos a ver los mockups o diseño de las pantallas__
    <pre>
    .container {
        border: #1f6fb2 1px;
+       background: #c6c8ca;
        padding: 10px;
        display: flex;
        flex-direction: column;
@@ -106,11 +107,11 @@ __A continuación vamos a ver los mockups o diseño de las pantallas__
    </pre>
    
    Esta sería la imagen del layout inicial
-   ![Imagen inicial](./public/imagenes/imagenes_apuntes/pantallas_mokups/diseño_layout_1.png)
+   ![Imagen inicial](../public/imagenes/imagenes_apuntes/pantallas_mokups/diseño_layout_1.png)
    
  #### Header
 
- Va a ser la __Cabecera___ de la pantalla.
+ Va a ser la __Cabecera__ de la pantalla.
  En ella vamos a establecer un  login, un título y una sección para menú de login o bien nombre de usuario logueado.
  Establecemos pues tres secciones distribuidas horizontalmente como mostramos en la siguiente imagen
  #### Logo
@@ -166,16 +167,51 @@ __A continuación vamos a ver los mockups o diseño de las pantallas__
   </pre>
   Laravel tiene unas directivas en blade que realizan esta acción 
   __@auth__ y __@guest__ https://laravel.com/docs/master/blade#if-statements, ver   authentication directive
-  entonces lo único que hemos de hacer en la plantilla es 
-  <pre>
-  @auth
-     
+  
+  Entonces lo único que hemos de hacer en la plantilla escribir el código. Posteriormente en el apartado de autentificación probaremos su uso, de momento solo estamos en diseño 
+   <pre>
+  @guest
+  {{--sección de no autentificación--}}   
   @else
-  
-  @endauth
+  {{--sección de autentificación--}}
+  @endguest
   </pre> 
-    
-  
+ 
+ Ahora el código que ponemos (usamos un poco de bootstrap) para cada parte será el siguiente
+ De momento en el action del _si estoy autenticado_ será invocar a una ruta llamada __login__ que en la sección de autenticación especificaremos   
+  <pre>
+  @guest
+                <form class="form-inline login-form d-flex flex-column justify-content-sm-end align-items-end "
+                          action="{{route("login")}}"
+                          method="post">
+                        <div class="input-group input-group-sm justify-content-sm-end d-flex flex-row  ">
+                            <input type="text" class=" p2 form-control col-sm-6 m-2" placeholder="Username"
+                                   required>
+                            <input type="text" class="p2 form-control col-sm-6  m-2" placeholder="Password"
+                                   required>
+                        </div>
+                        <div class="input-group-sm justify-content-sm-end d-flex flex-row   ">
+                            <button type="submit" class="p2 btn btn-primary m-2">Login</button>
+                            <button type="submit" class="p2 btn btn-primary m-2">Registrarse</button>
+                        </div>
+                    </form>
+    @else
+    {{--sección de autentificación--}}
+    @endguest
+  </pre>
+   Podemos ver la siguiente imagen del menú de login
+  ![Imagen de login](./../public/imagenes/imagenes_apuntes/menu_login.PNG)
+ 
+ En caso de estar conectado, debemos mostar el nombre del usuario conectado y la opciòn de desconexión
+ 
+ Para acceder al nombre del usuario conectado en la vista, podemos acceder a la facade __Auth__ . En este caso los datos del usuario estarán en la tabla __user__, y el nombre será el campo __name__
+ 
+ Todos estos aspectos se considerarán en la sección de autentificación.
+ 
+ 
+ <pre>
+ Auth::user()->name
+ </pre> 
  #### Menu
  #### Contenido principal
  En el cuerpo, mostraremos o un carrusell o el contenido correspodiente según la página En footer simplemnte información de copy right y datos de contacto ![P&#xE1;gina principal o layout no conectado](https://github.com/MAlejandroR/LaravelTienda/tree/1b4278626b64cab9d492909f7a95488309b37064/storage/imagenes/mockups/layout.png) **ver ./resource/views/layouts/app.blade.php**

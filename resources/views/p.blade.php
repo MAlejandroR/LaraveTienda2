@@ -6,49 +6,34 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+
+    <link rel="stylesheet" href="{{asset("./css/app.css")}}">
+
     <link rel="stylesheet" href="{{asset("./css/estilo2.css")}}">
 
 </head>
 <body>
-<div class="container">
+<div class="container_main">
     <header>
         <img class=logo src="{{asset("./storage/imagenes/logo_cpifp-300x116.png")}}" alt="Logo enlaces">
         <h1 class="titulo">CPIFP Enlaces</h1>
         <div id="login">
-            @auth
-                <form action="{{route("login")}}" method="POST">
-                    <div class="datos">
-                        <label for="user">Usuario</label>
-                        <input type="text" name="user" id="user">
-                        <label for="pass">Password</label>
-                        <input type="text" name="pass" id="user">
+            @guest
+                <form class="form-inline login-form d-flex flex-column justify-content-sm-end align-items-end "
+                      action="{{route("acceso")}}"
+                      method="post">
+                    <div class="input-group input-group-sm justify-content-sm-end d-flex flex-row  ">
+                        <input type="text" class=" p2 form-control col-sm-6 m-2" placeholder="Username">
+                        <input type="text" class="p2 form-control col-sm-6  m-2" placeholder="Password">
                     </div>
-                    <div class="submit">
-                        <input type="submit" value="Validar" name="submit">
-                        <input type="submit" value="Registrarse" name="submit">
+                    <div class="input-group-sm justify-content-sm-end d-flex flex-row   ">
+                        <button type="submit" class="p2 btn btn-primary m-2">Login</button>
+                        <button type="submit" class="p2 btn btn-primary m-2" name="submit" value="registrarse">Registrarse</button>
                     </div>
                 </form>
             @else
-                <div class="nav-item dropdown">
-                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                        {{-- Auth::user()->name --}} <span class="caret"></span>
-                    </a>
 
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="{{ route('logout') }}"
-                           onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                            {{ __('Logout') }}
-                        </a>
-
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                            @csrf
-                        </form>
-                    </div>
-                </div>
-
-                {{--si estoy logueado muestro nombre y logout si no formulario de login --}}
-            @endauth
+            @endguest
         </div>
     </header>
     <nav>
