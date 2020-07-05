@@ -26,6 +26,11 @@ Para ello rehacemos la práctica de la _tienda_ usando __laravel__ y vamos espec
 * [Creación de la pantallas blade]()
 * [Autentificación o autenticacion]()
 * [Creación de rutas]()
+* [Creación de bases de datos y su población]()
+* [Gestión de sesiones]()
+* [Factura]()
+* [Idiomas]()
+* [PDF]()
 
 ### Diseño de la interfaz gráfica
 

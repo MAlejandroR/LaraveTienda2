@@ -1,4 +1,4 @@
-@extends ("layout")
+@extends ("layout_")
 @section ("menu")
   <h2>Usted se ha logueado como XXXXXX</h2>
   <form class="d-inline" method="POST" action="login">

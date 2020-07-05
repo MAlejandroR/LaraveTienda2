@@ -1,4 +1,4 @@
-@extends ("layout")
+@extends ("layout_")
 @section ("menu")
     <form class="form-inline login-form input-group-sm justify-content-sm-end" action="/examples/actions/confirmation.php"
           method="post">

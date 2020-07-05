@@ -1,15 +1,14 @@
 <?php
 
+namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
-
+use Illuminate\Http\Request;
 
 class Login extends Controller
 {
-
-
+    //
     public function acceso(Request $datos){
         if ($datos->submit=="registrarse")
-            $this->redirectTo("registro");
+            return redirect("register");
     }
 }
