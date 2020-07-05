@@ -26,3 +26,4 @@ Route::get('/logged', function () {
 Auth::routes();
 Route::post("acceso", "Login@acceso")->name('acceso');
 Route::get('/home', 'HomeController@index')->name('home');
+Route::view('/ppal', "layouts/ppal");
