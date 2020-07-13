@@ -24,7 +24,7 @@ __A continuación vamos a ver los mockups o diseño de las pantallas__
  * main   70%
  * footer 10%
  
- Para el diseño  establemcemos todo en un container con un display flex como se muestra en __estilo.css__
+ Para el diseño  establecemos todo en un container con un display flex como se muestra en __estilo.css__
   <pre>
   .container{
       padding: 10px;

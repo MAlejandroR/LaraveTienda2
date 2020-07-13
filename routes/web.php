@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::view("p", "p");
+Route::view("1", "layouts/layout1");
 /*
 Route::get('/', function () {
     return view('paginas.login');
