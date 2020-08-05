@@ -1,0 +1,92 @@
+// Bootstrap
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import '~bootstrap/scss/bootstrap';
+
+.center { /*centrado total en fila y comuna*/
+    @extend .justify-content-center;
+    @extend .align-items-center;
+}
+
+.fila { /*Display en filas*/
+    @extend .d-flex ;
+    @extend .flex-row;
+}
+
+.columna { /*Display en columnas*/
+    @extend .d-flex;
+    @extend .flex-column;
+}
+
+.container_main {
+    /*clase para la caja global => header(cabecera) + nav (menú de navegacin) + main(Cuerpo ppal)
+   footer (pie de la página) */
+    // extending bootstrap container
+    @extend .container-fluid;
+    @extend .columna;
+    @extend .pt-3 !optional; /*padding */
+    border: #1f6fb2 1px;
+    @extend .bg-white;
+    @extend .vh-100 ; /*Altura igual al view port*/
+    @extend .justify-content-center !optional;
+}
+
+
+header { /*clase para la cabecer (logo+titulo+menú conexión o info usuario conectao)*/
+    @extend .fila;
+    background: rgb(51, 51, 51);
+    height: 15%;/*PArte del viewport que asigno a la cabecera*/
+    @extend .justify-content-between;
+    @extend .center;
+    @extend .text-white;
+    /* distribución de elementos */
+}
+
+.logo > img {
+    @extend .m-4;
+    @extend .p-3;
+    @extend .mh-100; /*Máxima  altura de la imagen que sea el 100% del headere*/
+}
+
+
+.titulo {
+
+
+}
+
+.usuario {
+
+
+}
+
+nav {
+    @extend .fila;
+    height: 10%;
+    border-radius: 10px;
+    padding: 3px;
+    margin: 5px;
+    background: rgb(225, 225, 225);
+    @extend .center;
+
+}
+
+main {
+
+    height: 65%;
+    background: white;
+    border: black 1px;
+    @extend .center;
+
+}
+
+footer {
+    @extend .fila;
+    height: 10%;
+    background: rgb(51, 51, 51);
+    border: black 1px;
+    color: white;
+    @extend .center;
+
+}
+
+

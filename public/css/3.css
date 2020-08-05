@@ -1,0 +1,74 @@
+
+.container_main {
+    /*clase para la caja global => header(cabecera) + nav (menú de navegacin) + main(Cuerpo ppal)
+   footer (pie de la página) */
+    display: flex;
+    flex-flow:column;
+    justify-content: center;
+    padding: 5px;
+    border: #1f6fb2 1px;
+    background:white ;
+    height:100vh;
+}
+
+header { /*clase para la cabecer (logo+titulo+menú conexión o info usuario conectao)*/
+    display: flex;
+    flex-flow:row;
+    padding: 5px;
+    border: #1f6fb2 1px;
+    background: rgb(51, 51, 51);
+    height:15%;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    color:white;
+}
+
+
+header >.logo {
+    max-height: 100%;
+}
+
+header >.titulo{
+    margin: 10px;
+    margin-right: 20px;
+    max-height: 100%;
+    color :rgb(228, 86, 20);
+    font-size: 2em;
+    font-weight: bold;
+    font-style: oblique;
+}
+
+
+.usuario {
+
+
+}
+
+nav {
+    display: flex;
+    flex-flow:row;
+    height: 10%;
+    border-radius: 10px;
+    padding: 3px;
+    margin: 5px;
+    background: rgb(225, 225, 225);
+    align-items: center;
+}
+
+main {
+    height:70%;
+    background: white;
+    border: black 1px;
+    align-items: center;
+}
+
+footer {
+    display: flex;
+    flex-flow:row;
+    height: 10%;
+    background: rgb(51, 51, 51);
+    border: black 1px;
+    color: white;
+   align-items: center;
+}

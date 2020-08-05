@@ -14,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 Route::view("p", "p");
 Route::view("1", "layouts/layout1");
+Route::view("2", "layouts/layout2");
+Route::view("3", "layouts/layout3");
 /*
 Route::get('/', function () {
     return view('paginas.login');

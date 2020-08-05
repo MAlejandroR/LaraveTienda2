@@ -109,6 +109,10 @@ __A continuación vamos a ver los mockups o diseño de las pantallas__
    Esta sería la imagen del layout inicial
    ![Imagen inicial](../public/imagenes/imagenes_apuntes/pantallas_mokups/diseño_layout_1.png)
    
+   * [Header](./header.md)
+   * [Menú](./Doc/menu.md)
+   * [Contenido principal](./Doc/main.md)
+   * [Footer o pie de página](./Doc/footer.md)
  #### Header
 
  Va a ser la __Cabecera__ de la pantalla.
@@ -166,20 +170,24 @@ __A continuación vamos a ver los mockups o diseño de las pantallas__
   }
   </pre>
   Laravel tiene unas directivas en blade que realizan esta acción 
-  __@auth__ y __@guest__ https://laravel.com/docs/master/blade#if-statements, ver   authentication directive
+  __@auth__ y __@guest__. Estas directivas equivalen a verificar si el usuario está o no autentificado 
+   
+       https://laravel.com/docs/master/blade#if-statements, ver   authentication directive
   
-  Entonces lo único que hemos de hacer en la plantilla escribir el código. Posteriormente en el apartado de autentificación probaremos su uso, de momento solo estamos en diseño 
+  Por lo tanto lo único que hemos de hacer en la plantilla escribir el código. Posteriormente en el apartado de autentificación probaremos su uso, de momento solo estamos en diseño 
    <pre>
   @guest
   {{--sección de no autentificación--}}   
-  @else
-  {{--sección de autentificación--}}
   @endguest
+  @auth
+  {{--sección de autentificación--}}
+  @endauth
   </pre> 
  
  Ahora el código que ponemos (usamos un poco de bootstrap) para cada parte será el siguiente
+ 
  De momento en el action del _si estoy autenticado_ será invocar a una ruta llamada __login__ que en la sección de autenticación especificaremos   
-  <pre>
+ <pre> 
   @guest
                 <form class="form-inline login-form d-flex flex-column justify-content-sm-end align-items-end "
                           action="{{route("login")}}"
@@ -208,11 +216,11 @@ __A continuación vamos a ver los mockups o diseño de las pantallas__
  
  Todos estos aspectos se considerarán en la sección de autentificación.
  
- 
  <pre>
- Auth::user()->name
+   Auth::user()->name
  </pre> 
  #### Menu
+ 
  #### Contenido principal
  En el cuerpo, mostraremos o un carrusell o el contenido correspodiente según la página En footer simplemnte información de copy right y datos de contacto ![P&#xE1;gina principal o layout no conectado](https://github.com/MAlejandroR/LaravelTienda/tree/1b4278626b64cab9d492909f7a95488309b37064/storage/imagenes/mockups/layout.png) **ver ./resource/views/layouts/app.blade.php**
 

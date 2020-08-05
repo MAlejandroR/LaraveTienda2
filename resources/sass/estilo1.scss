@@ -1,0 +1,75 @@
+// Bootstrap
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import '~bootstrap/scss/bootstrap';
+.center{/*centrado total en fila y comuna*/
+    @extend .justify-content-center;
+    @extend .align-items-center;
+}
+.filas{ /*Display en filas*/
+    @extend .d-flex;
+    @extend .flex-row;
+}
+.columnas{/*Display en columnas*/
+    @extend .d-flex;
+    @extend .flex-column;
+}
+
+.container_main {
+    /*clase para la caja global => header(cabecera) + nav (menú de navegacin) + main(Cuerpo ppal)
+   footer (pie de la página) */
+    // extending bootstrap container
+    @extend .container-fluid;
+    @extend .columnas;
+    @extend .pt-3 !optional;; /*padding */
+    border: #1f6fb2 1px;
+    @extend  .bg-white;
+    height: 100vh;
+    @extend .vh-100 !optional; /*Altura igual al view port*/
+    @extend .justify-content-center !optional;
+
+}
+
+
+header { /*clase para la cabecer (logo+titulo+menú conexión o info usuario conectao)*/
+    @extend .columnas;
+    background: rgb(51, 51, 51);
+    height: 15%;
+    @extend .center;
+    @extend  .text-white;
+    /* distribución de elementos */
+
+
+}
+
+nav {
+    @extend .columnas;
+    height: 10%;
+    border-radius: 10px;
+    padding: 3px;
+    margin: 5px;
+    background: rgb(225, 225, 225);
+    @extend .center;
+
+}
+
+main {
+    @extend .columnas;columns: c;
+    height: 65%;
+    background: white;
+    border: black 1px;
+    @extend .center;
+
+}
+
+footer {
+    @extend .columnas;
+    height: 10%;
+    background: rgb(51, 51, 51);
+    border: black 1px;
+    color: white;
+    @extend .center;
+
+}
+
+

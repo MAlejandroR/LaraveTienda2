@@ -12,7 +12,7 @@ const mix = require('laravel-mix');
  */
 
 mix.js('resources/js/app.js', 'public/js')
-    .sass('resources/sass/estilo.scss', 'public/css');
+    .sass('resources/sass/estilo2.scss', 'public/css/estilo2.css');
 
 
 

@@ -605,6 +605,7 @@ pre code {
 }
 
 .container-fluid,
+.container_main,
 .container-xl,
 .container-lg,
 .container-md,
@@ -4539,6 +4540,7 @@ input[type=button].btn-block {
 
 .navbar .container,
 .navbar .container-fluid,
+.navbar .container_main,
 .navbar .container-sm,
 .navbar .container-md,
 .navbar .container-lg,
@@ -4621,6 +4623,7 @@ input[type=button].btn-block {
 @media (max-width: 575.98px) {
   .navbar-expand-sm > .container,
   .navbar-expand-sm > .container-fluid,
+  .navbar-expand-sm > .container_main,
   .navbar-expand-sm > .container-sm,
   .navbar-expand-sm > .container-md,
   .navbar-expand-sm > .container-lg,
@@ -4651,6 +4654,7 @@ input[type=button].btn-block {
 
   .navbar-expand-sm > .container,
   .navbar-expand-sm > .container-fluid,
+  .navbar-expand-sm > .container_main,
   .navbar-expand-sm > .container-sm,
   .navbar-expand-sm > .container-md,
   .navbar-expand-sm > .container-lg,
@@ -4671,6 +4675,7 @@ input[type=button].btn-block {
 @media (max-width: 767.98px) {
   .navbar-expand-md > .container,
   .navbar-expand-md > .container-fluid,
+  .navbar-expand-md > .container_main,
   .navbar-expand-md > .container-sm,
   .navbar-expand-md > .container-md,
   .navbar-expand-md > .container-lg,
@@ -4701,6 +4706,7 @@ input[type=button].btn-block {
 
   .navbar-expand-md > .container,
   .navbar-expand-md > .container-fluid,
+  .navbar-expand-md > .container_main,
   .navbar-expand-md > .container-sm,
   .navbar-expand-md > .container-md,
   .navbar-expand-md > .container-lg,
@@ -4721,6 +4727,7 @@ input[type=button].btn-block {
 @media (max-width: 991.98px) {
   .navbar-expand-lg > .container,
   .navbar-expand-lg > .container-fluid,
+  .navbar-expand-lg > .container_main,
   .navbar-expand-lg > .container-sm,
   .navbar-expand-lg > .container-md,
   .navbar-expand-lg > .container-lg,
@@ -4751,6 +4758,7 @@ input[type=button].btn-block {
 
   .navbar-expand-lg > .container,
   .navbar-expand-lg > .container-fluid,
+  .navbar-expand-lg > .container_main,
   .navbar-expand-lg > .container-sm,
   .navbar-expand-lg > .container-md,
   .navbar-expand-lg > .container-lg,
@@ -4771,6 +4779,7 @@ input[type=button].btn-block {
 @media (max-width: 1199.98px) {
   .navbar-expand-xl > .container,
   .navbar-expand-xl > .container-fluid,
+  .navbar-expand-xl > .container_main,
   .navbar-expand-xl > .container-sm,
   .navbar-expand-xl > .container-md,
   .navbar-expand-xl > .container-lg,
@@ -4801,6 +4810,7 @@ input[type=button].btn-block {
 
   .navbar-expand-xl > .container,
   .navbar-expand-xl > .container-fluid,
+  .navbar-expand-xl > .container_main,
   .navbar-expand-xl > .container-sm,
   .navbar-expand-xl > .container-md,
   .navbar-expand-xl > .container-lg,
@@ -4825,6 +4835,7 @@ input[type=button].btn-block {
 
 .navbar-expand > .container,
 .navbar-expand > .container-fluid,
+.navbar-expand > .container_main,
 .navbar-expand > .container-sm,
 .navbar-expand > .container-md,
 .navbar-expand > .container-lg,
@@ -4848,6 +4859,7 @@ input[type=button].btn-block {
 
 .navbar-expand > .container,
 .navbar-expand > .container-fluid,
+.navbar-expand > .container_main,
 .navbar-expand > .container-sm,
 .navbar-expand > .container-md,
 .navbar-expand > .container-lg,
@@ -7068,7 +7080,8 @@ button.bg-dark:focus {
   background-color: #1d2124 !important;
 }
 
-.bg-white {
+.bg-white,
+.container_main {
   background-color: #fff !important;
 }
 
@@ -7231,8 +7244,13 @@ button.bg-dark:focus {
 }
 
 .d-flex,
+.columnas,
+footer,
+main,
+nav,
 header,
-container_main {
+.container_main,
+.filas {
   display: flex !important;
 }
 
@@ -7473,13 +7491,34 @@ container_main {
   padding-top: 100%;
 }
 
+.embed-responsive-21by9::before {
+  padding-top: 42.8571428571%;
+}
+
+.embed-responsive-16by9::before {
+  padding-top: 56.25%;
+}
+
+.embed-responsive-4by3::before {
+  padding-top: 75%;
+}
+
+.embed-responsive-1by1::before {
+  padding-top: 100%;
+}
+
 .flex-row,
-header {
+.filas {
   flex-direction: row !important;
 }
 
 .flex-column,
-container_main {
+.columnas,
+footer,
+main,
+nav,
+header,
+.container_main {
   flex-direction: column !important;
 }
 
@@ -7532,12 +7571,16 @@ container_main {
 }
 
 .justify-content-center,
-container_main {
+.container_main,
+.center,
+footer,
+main,
+nav,
+header {
   justify-content: center !important;
 }
 
-.justify-content-between,
-header {
+.justify-content-between {
   justify-content: space-between !important;
 }
 
@@ -7553,7 +7596,12 @@ header {
   align-items: flex-end !important;
 }
 
-.align-items-center {
+.align-items-center,
+.center,
+footer,
+main,
+nav,
+header {
   align-items: center !important;
 }
 
@@ -8407,7 +8455,7 @@ header {
 }
 
 .vh-100,
-container_main {
+.container_main {
   height: 100vh !important;
 }
 
@@ -8632,7 +8680,7 @@ container_main {
 }
 
 .pt-3,
-container_main,
+.container_main,
 .py-3 {
   padding-top: 1rem !important;
 }
@@ -10718,7 +10766,8 @@ container_main,
   font-style: italic !important;
 }
 
-.text-white {
+.text-white,
+header {
   color: #fff !important;
 }
 
@@ -10936,14 +10985,32 @@ a.text-dark:focus {
   }
 }
 
-container_main {
+.center,
+footer,
+main,
+nav,
+header {
+  /*centrado total en fila y comuna*/
+}
+
+.filas {
+  /*Display en filas*/
+}
+
+.columnas,
+footer,
+main,
+nav,
+header,
+.container_main {
+  /*Display en columnas*/
+}
+
+.container_main {
   /*clase para la caja global => header(cabecera) + nav (menú de navegacin) + main(Cuerpo ppal)
   footer (pie de la página) */
-  /*establecemos diseño flexible para su contenido*/
-  /*sus elementos en columna*/
   /*padding */
   border: #1f6fb2 1px;
-  background: #c6c8ca;
   height: 100vh;
   /*Altura igual al view port*/
 }
@@ -10952,17 +11019,20 @@ header {
   /*clase para la cabecer (logo+titulo+menú conexión o info usuario conectao)*/
   background: #333333;
   height: 15%;
-  /*diseño flexible*/
-  /*Contenido en fila*/
   /* distribución de elementos */
 }
 
 nav {
   height: 10%;
+  border-radius: 10px;
+  padding: 3px;
+  margin: 5px;
   background: #e1e1e1;
 }
 
 main {
+  -moz-columns: c;
+       columns: c;
   height: 65%;
   background: white;
   border: black 1px;
@@ -10972,5 +11042,6 @@ footer {
   height: 10%;
   background: #333333;
   border: black 1px;
+  color: white;
 }
 
