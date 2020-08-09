@@ -72,26 +72,25 @@
  Ahora el código que ponemos (usamos un poco de bootstrap) para cada parte será el siguiente
  
  De momento en el action del _si estoy autenticado_ será invocar a una ruta llamada __login__ que en la sección de autenticación especificaremos   
- <pre> 
-  @guest
-                <form class="form-inline login-form d-flex flex-column justify-content-sm-end align-items-end "
-                          action="{{route("login")}}"
-                          method="post">
-                        <div class="input-group input-group-sm justify-content-sm-end d-flex flex-row  ">
-                            <input type="text" class=" p2 form-control col-sm-6 m-2" placeholder="Username"
-                                   required>
-                            <input type="text" class="p2 form-control col-sm-6  m-2" placeholder="Password"
-                                   required>
-                        </div>
-                        <div class="input-group-sm justify-content-sm-end d-flex flex-row   ">
-                            <button type="submit" class="p2 btn btn-primary m-2">Login</button>
-                            <button type="submit" class="p2 btn btn-primary m-2">Registrarse</button>
-                        </div>
-                    </form>
-    @else
-    {{--sección de autentificación--}}
+ 
+ <code>
+ 
+    @guest
+       <form class="form-inline login-form d-flex flex-column justify-content-sm-end align-items-end " action="{{route("login")}}" method="post">
+         <div class="input-group input-group-sm justify-content-sm-end d-flex flex-row  ">
+               <input type="text" class=" p2 form-control col-sm-6 m-2" placeholder="Username" required>
+               <input type="text" class="p2 form-control col-sm-6  m-2" placeholder="Password"required>
+         </div>
+         <div class="input-group-sm justify-content-sm-end d-flex flex-row   ">
+             <button type="submit" class="p2 btn btn-primary m-2">Login</button>
+             <button type="submit" class="p2 btn btn-primary m-2">Registrarse</button>
+         </div>
+      </form>
     @endguest
-  </pre>
+    @auth
+       <!--Código si está atentificado --> 
+    @endauth
+ </code>
    Podemos ver la siguiente imagen del menú de login
   ![Imagen de login](./../public/imagenes/imagenes_apuntes/menu_login.PNG)
  
@@ -101,7 +100,13 @@
  
  Todos estos aspectos se considerarán en la sección de autentificación.
  
- <pre>
-   Auth::user()->name
- </pre> 
-[Volver](diseno_pantallas.md)
+ <code>
+ 
+    @auth
+     Auth::user()->name
+      <!--Código si está atentificado --> 
+     @endauth
+ 
+ </code> 
+ 
+[Volver a la página diseño de pantallas](./diseno_pantallas.md)
