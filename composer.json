@@ -52,7 +52,7 @@
     "prefer-stable": true,
     "scripts": {
         "post-autoload-dump": [
-            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "Illuminate\\Foundation\\ComposerScripts::poustAutoloadDump",
             "@php artisan package:discover --ansi"
         ],
         "post-root-package-install": [
@@ -61,5 +61,8 @@
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
         ]
+    },
+    "dependencies": {
+        "lodash": ">=4.17.19"
     }
 }
