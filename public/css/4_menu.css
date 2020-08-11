@@ -45,7 +45,7 @@ header >.titulo{
 
 }
 
-nav {
+.menu{
     display: flex;
     flex-flow:row;
     height: 10%;
@@ -53,8 +53,32 @@ nav {
     padding: 3px;
     margin: 5px;
     background: rgb(225, 225, 225);
-
     justify-content: start;
+}
+
+nav>a:hover{
+    color:black;
+    font-size:2.1em ;
+}
+nav > a {
+    font-size: 2em;
+    border: #4c110f;
+    background: #a71d2a;
+    padding: 5px;
+    margin: 10px;
+    color:white;
+    border-radius: 10px;
+}
+.rojo{
+    background: red;
+
+}
+.azul {
+    background: blue;
+
+}
+.verde{
+    background: darkgreen;
 }
 
 main {

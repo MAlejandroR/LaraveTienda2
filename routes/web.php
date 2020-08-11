@@ -17,6 +17,7 @@ Route::view("1", "layouts/layout1");
 Route::view("2", "layouts/layout2");
 Route::view("3", "layouts/layout3");
 Route::view("4menu", "layouts/layout_menu_4");
+Route::view("5main", "p5_main");
 /*
 Route::get('/', function () {
     return view('paginas.login');

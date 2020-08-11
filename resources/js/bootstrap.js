@@ -1,3 +1,9 @@
+/*Añadido para usar bootstrap-vue, pero no me funciona*/
+import Vue from 'vue'
+import BootstrapVue from 'bootstrap-vue'
+
+Vue.use(BootstrapVue)
+/*Fin add -- queda pendiente probarlo*/
 window._ = require('lodash');
 
 /**

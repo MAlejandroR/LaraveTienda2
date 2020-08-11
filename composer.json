@@ -52,7 +52,7 @@
     "prefer-stable": true,
     "scripts": {
         "post-autoload-dump": [
-            "Illuminate\\Foundation\\ComposerScripts::poustAutoloadDump",
+            "Illuminate\\Foundation\\ComposerScripts::pogit ustAutoloadDump",
             "@php artisan package:discover --ansi"
         ],
         "post-root-package-install": [

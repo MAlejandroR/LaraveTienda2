@@ -114,10 +114,7 @@ __A continuación vamos a ver los mockups o diseño de las pantallas__
    * [Contenido principal](./Doc/main.md)
    * [Footer o pie de página](./Doc/footer.md)
  
- #### Menu
  
- En el cuerpo, mostraremos o un carrusell o el contenido correspodiente según la página En footer simplemnte información de copy right y datos de contacto ![P&#xE1;gina principal o layout no conectado](https://github.com/MAlejandroR/LaravelTienda/tree/1b4278626b64cab9d492909f7a95488309b37064/storage/imagenes/mockups/layout.png) **ver ./resource/views/layouts/app.blade.php**
-
  #### footer
     
     
