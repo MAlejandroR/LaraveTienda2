@@ -144,7 +144,7 @@ En el ficheros de rutas creamos por comodidad la ruta __1.php__
 </code>
    Esta sería la imagen del layout inicial
    
-![Imagen inicial](./public/imagenes/imagenes_apuntes/pantallas_mokups/diseño_layout_1.png)
+![Imagen inicial](../public/imagenes/imagenes_apuntes/pantallas_mokups/diseño_layout_1.png)
    
    
    * [Header](./header.md)
