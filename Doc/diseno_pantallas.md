@@ -15,53 +15,55 @@ Rehacemos la práctica de la tienda usando laravel y vamos especificando requisi
 
 __A continuación vamos a ver los mockups o diseño de las pantallas__
 
-### Layout
+## Layout 
 
  Esta pantalla va a ser la base e todas las pantallas y corresponde al siguiente diseño
- Realizamos un típico diseño de 4 secciones
- * header 15%
- * nav   5% (Menú de cabecera)
- * main   70%
- * footer 10%
+ Realizamos un típico diseño de 4 secciones. Especificamos el porcentaje en altura decidio para cada sección.
+ * __header__ 15%: común en todas las páginas
+ * __nav__   5%: (Menú de cabecera) común en todas las páginas
+ * __main__   70% Cambiará según pantalla
+ * __footer__ 10% común en todas las pantallas
  
- Para el diseño  establecemos todo en un container con un display flex como se muestra en __estilo.css__
-  <pre>
-  .container{
-      padding: 10px;
-      display: flex;
-      flex-direction: column;
-  }
- </pre>
+ Para el diseño  establecemos una clase en css llamada  __container_main__ con un display flex. El contenido estará en el fichero de estilos.
+ creamos el fichero __1.css__, según avancemos crearemos nuevos ficheros css, manteniendo los anteriores para poder visualizar cada parte intermedia del proyecto.
+ 
+<code>
+  
+     .container_main {
+          /*clase para la caja global => header(cabecera) + nav (menú de navegacin) + main(Cuerpo ppal)+
+        footer (pie de la página) */
+        display: flex;
+        flex-flow:column;
+        justify-content: center;
+        padding: 5px;
+        border: #1f6fb2 1px;
+        background:white ;
+        height:100vh;
+     }
+</code>
  
   Los elementos del flex llevarán un porcentaje de ocupación
   
   Establecemos una altura del container igual al viewport que corresponda a la pantalla
+ 
+<code>
   
-  <pre>
-      height: 100vh; //v de viewport y h de height
-  </pre>
-  
-  Por el momento vamos a hacer que los contenidos estén centrados
-  <pre>
+    height: 100vh; //v de viewport y h de height
+</code>
+Por el momento vamos a hacer que los contenidos estén centrados
+<code>
+
        //El eje principal  y secundario depende del valor de flex-direcction row o column
         text-align: center; //Centrando el eje secundario (en este caso vertical)
         justify-items: center; //Centrado el eje principal (en este caso horizontal)
-   </pre>
+</code>
    
    Los __items__ del container (header, nav, main y foote) también serán containers de otros elementos quedando el css inicial
-   <pre>
-   .container {
-       border: #1f6fb2 1px;
-       background: #c6c8ca;
-       padding: 10px;
-       display: flex;
-       flex-direction: column;
-       height: 100vh;
-       text-align: center;
-       justify-items: center;
-   }
-   
-   header {
+
+
+<code>
+  
+    header {
        height: 15%;
        background: rgb(51, 51, 51);
        color: white;
@@ -70,9 +72,8 @@ __A continuación vamos a ver los mockups o diseño de las pantallas__
        flex-direction: row;
        justify-content: center;
        align-items: center;
-   }
-   
-   nav {
+    }
+    nav {
        height: 5%;
        background:  rgb(225, 225,225);
        border-radius: 10px;
@@ -82,9 +83,8 @@ __A continuación vamos a ver los mockups o diseño de las pantallas__
        align-items: center;
        padding: 3px;
        margin: 5px;
-   }
-   
-   main {
+    }
+    main {
        height: 70%;
        background: white;
        border: black 1px;
@@ -92,9 +92,8 @@ __A continuación vamos a ver los mockups o diseño de las pantallas__
        flex-direction: row;
        justify-content: center;
        align-items: center;
-   }
-   
-   footer {
+    }
+    footer {
        display: flex;
        flex-direction: row;
        justify-content: center;
@@ -103,11 +102,50 @@ __A continuación vamos a ver los mockups o diseño de las pantallas__
        height: 10%;
        background: rgb(51, 51, 51);
        border: black 1px;
-   }
-   </pre>
-   
+    }
+</code>
+Para esta primera parte del proyecto, vamos a crear la siguiente plantilla blade (que será un layout principal en el proyecto)
+
+<code>
+
+    <!doctype html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="{{asset("./css/1.css")}}">
+        <title>Tienda el Laravel</title>
+    </head>
+    <body>
+    <div class="container_main">
+        <header>
+            <h1>Cabecera</h1>
+        </header>
+        <nav>
+            <h1>Menú</h1>
+        </nav>
+        <main>
+            <h1>Contenido principal</h1>
+        </main>
+        <footer>
+            <h1>Pie de página</h1>
+        </footer>
+    </div>
+    </body>
+    </html>
+
+</code>
+En el ficheros de rutas creamos por comodidad la ruta __1.php__
+<code>
+
+    Route::view("1", "layouts/layout1");
+</code>
    Esta sería la imagen del layout inicial
-   ![Imagen inicial](../public/imagenes/imagenes_apuntes/pantallas_mokups/diseño_layout_1.png)
+   
+![Imagen inicial](./public/imagenes/imagenes_apuntes/pantallas_mokups/diseño_layout_1.png)
+   
    
    * [Header](./header.md)
    * [Menú](./menu.md)

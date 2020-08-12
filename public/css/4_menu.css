@@ -95,5 +95,14 @@ footer {
     background: rgb(51, 51, 51);
     border: black 1px;
     color: white;
-   align-items: center;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+footer>a{
+    color:#5cd08d;
+}
+footer>a:hover{
+    color:white;
+
 }

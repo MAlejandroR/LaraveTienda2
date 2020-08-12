@@ -48,17 +48,26 @@
         </div>
     </header>
     <nav class="menu">
-        <a  class="rojo" href="#">Tienda</a>
-        <a  class="verde" href="#">Conócenos</a>
-        <a  class="azul" href="#">Contacta</a>
+        <a class="rojo" href="#">Tienda</a>
+        <a class="verde" href="#">Conócenos</a>
+        <a class="azul" href="#">Contacta</a>
     </nav>
 
     <main>
         @yield("contenido")
     </main>
-    <footer>
-        <h1>Pie de página</h1>
+    <!-- Footer -->
+    <footer >
+
+        <!-- Copyright -->
+
+            <span style="font-size:2em">© 2020 Copyright</span>
+            <a  target="_blank" style="font-size:2em" href="https://github.com/MAlejandroR/LaraveTienda">Código en github</a>
+
+        <!-- Copyright -->
+
     </footer>
+    <!-- Footer -->
 
 
 </div>

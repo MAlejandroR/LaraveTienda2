@@ -8,20 +8,21 @@ __LaravelTienda__ es un pequeño proyecto para adentranos en laravel.
 Para ello rehacemos la práctica de la _tienda_ usando __laravel__ y vamos especificando requisitos e implementación
 
 ### Herramientas utilizadas
- * __Pick__ para seleccionar colores https://ubunlog.com/pick-selector-color-ubuntu/
- * __flex__ documentación [Guía para usar flex](https://css-tricks.com/snippets/css/a-guide-to-flexbox)
- * __dia__
- * __git__
- * __laravel__
- * __php__
- * __mysql__
+ * __Pick__ Para seleccionar colores https://ubunlog.com/pick-selector-color-ubuntu/
+ * __flex__ En css usamos flex para ubicar los elementos. Documentación [Guía para usar flex](https://css-tricks.com/snippets/css/a-guide-to-flexbox)
+ * __dia__ Al principio para realizar algún diseño a nivel de bloques
+ * __git__ Como gestor de versiones y compartir el proyecto 
+ * __laravel__ Framework de php para el desarrollo
+ * __php__ Leguaje de programación
+ * __mysql__ Gestor de bases de datos, para su almacenamiento
  
  
 ## Creamos el nuevo proyecto
  ```bash
  laravel new LaravelTienda
 ```
-#Contenido o sumary
+#Documentanción del desarrollo del proyecto
+Abordamos el proyecto desde los siguientes items
 * [Diseño de pantallas](./Doc/diseno_pantallas.md)
 * [Creación de la pantallas blade]()
 * [Autentificación o autenticacion]()
