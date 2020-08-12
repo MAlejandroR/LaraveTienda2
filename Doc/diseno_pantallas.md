@@ -8,7 +8,7 @@ Rehacemos la práctica de la tienda usando laravel y vamos especificando requisi
 
 ## Planteamos el siguiente menú de navegación
 
-![Menú de navegaci&#xF3](../public/imagenes/imagenes_apuntes/diagrama_navegacion.png)
+![Menú de navegaci&#xF3](./../public/imagenes/imagenes_apuntes/diagrama_navegacion.png)
 
  En __color rojo__  se representan aquellas pantallas o recursos que requieren estar logueado para acceder a ellas
  En cualquiere de ellas podremos desloguearse
@@ -147,13 +147,204 @@ En el ficheros de rutas creamos por comodidad la ruta __1.php__
 ![Imagen inicial](../public/imagenes/imagenes_apuntes/pantallas_mokups/diseño_layout_1.png)
    
    
-   * [Header](./header.md)
-   * [Menú](./menu.md)
+   * [Menú](menu.md)
    * [Contenido principal](./Doc/main.md)
    * [Footer o pie de página](./Doc/footer.md)
  
+ ### Header
+ Va a ser la __Cabecera__ de la pantalla.
+ Vamos a tener tres secciones: 
+  * Logo
+  * Un título
+  * Sección de logueo o de información de usuario logueado
+  ![Secciones del header](./../public/imagenes/imagenes_apuntes/pantallas_mokups/header_block.png)
+   
+   En ella vamos a establecer un  login, un título y una sección para menú de login o bien nombre de usuario logueado.
+   Establecemos pues tres secciones distribuidas horizontalmente como mostramos en la siguiente imagen
+  #### Logo
+   Vamos a usar la imagen del cpifp los enlaces. La descargo de la página oficial 
+      http://www.cpilosenlaces.com/wp-content/uploads/2014/11/logo_cpifp-300x116.png
+    Guardo la imagen en un subdirectorio del dir __storage__.
+    Este directorio, como no está en la carpeta public, se debe de hacer un enlace directo a la carpeta public para tenerlo disponible.
+    Existe un comando que crea directamente el enlace directo   https://laravel.com/docs/7.x/filesystem#the-public-disk
+
+<code>
+
+     php artisan storage:link
+</code>
+Le damos un poco de estilo para que no se salga de su contenedor __header__ si redimensionamos y para que esté alineado a la izquierda
+<code>
+
+    header >.logo{
+        margin: 10px;
+        margin-left: 20px;
+        max-height: 100%;
+        }
+</code>
+En header modificamos la distribución de elementos
+<code>
+
+    header {
+        //...
+        justify-content: space-between;
+        align-items: center;
+</code>
+
+![Logo de cpi los enlaces](./../storage/app/public/imagenes/logo_cpifp-300x116.png)
+
+#### Título
+En este caso simplemente escribimos el texto __CPIFP Los Enlaces__ . Le damos un poco de estilo color, inclinado.
+<code>
+
+    header >.titulo{
+        margin: 10px;
+        margin-right: 20px;
+        max-height: 100%;
+        color :rgb(228, 86, 20);
+        font-size: 3em;
+        font-weight: bold;
+        font-style: oblique;
+    } 
+<code>
+
+#### Login o logueado
+    
+En este caso en la plantilla querríamos hacer algo del timp
+<code>
+
+    if (usuario logueado){
+       mostar nombre
+       mostar botón de deslogueo
+    else
+       mostar formulario login (cajas de texto y botón login)
+       mostrar botón registar    
+    }
+</code>
+Laravel tiene unas directivas en blade que realizan esta acción __@auth__ y __@guest__. Estas directivas equivalen a verificar si el usuario está o no autentificado 
+
+https://laravel.com/docs/master/blade#if-statements, ver   authentication directive
+    
+Por lo tanto lo único que hemos de hacer en la plantilla escribir el código. Posteriormente en el apartado de autentificación probaremos su uso, de momento solo estamos en diseño 
+<code>
+
+    @guest
+    {{--sección de no autentificación--}}   
+    @endguest
+    @auth
+    {{--sección de autentificación--}}
+    @endauth
+<code>   
+Ahora el código que ponemos (usamos un poco de bootstrap) para cada parte será el siguiente
+   
+De momento en el action del __si estoy autenticado__ será invocar a una ruta llamada __login__ que en la sección de autenticación especificaremos   
+   
+<code>
+   
+      @guest
+         <form class="form-inline login-form d-flex flex-column justify-content-sm-end align-items-end " action="{{route("login")}}" method="post">
+           <div class="input-group input-group-sm justify-content-sm-end d-flex flex-row  ">
+                 <input type="text" class=" p2 form-control col-sm-6 m-2" placeholder="Username" required>
+                 <input type="text" class="p2 form-control col-sm-6  m-2" placeholder="Password"required>
+           </div>
+           <div class="input-group-sm justify-content-sm-end d-flex flex-row   ">
+               <button type="submit" class="p2 btn btn-primary m-2">Login</button>
+               <button type="submit" class="p2 btn btn-primary m-2">Registrarse</button>
+           </div>
+        </form>
+      @endguest
+      @auth
+         <!--Código si está atentificado --> 
+      @endauth
+</code>
+Podemos ver la siguiente imagen del menú de login
+
+![Imagen de login](./../public/imagenes/imagenes_apuntes/menu_login.PNG)
+   
+En caso de estar conectado, debemos mostar el nombre del usuario conectado y la opciòn de desconexión
+   
+Para acceder al nombre del usuario conectado en la vista, podemos acceder a la facade __Auth__ . En este caso los datos del usuario estarán en la tabla __user__, y el nombre será el campo __name__
+   
+Todos estos aspectos se considerarán en la sección de autentificación.
+   
+<code>
+   
+      @auth
+       Auth::user()->name
+        <!--Código si está atentificado --> 
+       @endauth
+</code>
+ ara esta primera parte del proyecto, vamos a crear la siguiente plantilla blade (que será un layout principal en el proyecto)
  
- #### footer
+ __laravel3.blade.php__
+ 
+ <code>
+ 
+    <html lang="en">
+    <head>
+     <meta charset="UTF-8">
+     <meta name="viewport"
+           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <link rel="stylesheet" href="{{asset("./css/app.css")}}">
+     <link rel="stylesheet" href="{{asset("./css/3.css")}}">
+     <title>App tienda</title>
+    </head>
+    <body>
+    <div class="container_main">
+     <header>
+         <!-- El logo -->
+         <img class="logo" src="{{asset("storage/logo_cpifp-300x116.png")}}" alt="Logo de imágenes"/>
+         <div class="titulo">
+             <h1>CPIFP Los Enlaces</h1>
+         </div>
+         <div class="usuario">
+         @guest <!--Si no estoy logueado-->
+             <form class="form-inline login-form d-flex flex-column justify-content-sm-end align-items-end "
+                   action="{{route("login")}}"
+                   method="post">
+                 <div class="input-group input-group-sm justify-content-sm-end d-flex flex-row  ">
+                     <input type="text" class=" p2 form-control col-sm-6 m-2" placeholder="Username"
+                            required>
+                     <input type="text" class="p2 form-control col-sm-6  m-2" placeholder="Password"
+                            required>
+                 </div>
+                 <div class="input-group-sm justify-content-sm-end d-flex flex-row   ">
+                     <button type="submit" class="p2 btn btn-primary m-2">Login</button>
+                     <button type="submit" class="p2 btn btn-primary m-2">Registrarse</button>
+                 </div>
+             </form>
+             @endguest
+             @auth
+                 <h2>Datos de conectado</h2>
+             @endauth
+         </div>
+     </header>
+     <nav>
+         <h1>Menú</h1>
+     </nav>
+     <main>
+         <h1>Contenido principal</h1>
+     </main>
+     <footer>
+         <h1>Pie de página</h1>
+     </footer>
+    </div>
+    </body>
+    </html>
+ </code>
+ En el ficheros de rutas creamos por comodidad la ruta __1.php__
+ <code>
+ 
+     Route::view("2", "layouts/layout2");
+ </code>
+ La página que visualizamos sería
+ 
+ ![Página con header realizado](./../public/imagenes/imagenes_apuntes/pantallas_mokups/header.png)
+ 
+    Esta sería la imagen del layout inicial
+ ### Menú
+ ### Main
+ ### footer
     
     
   

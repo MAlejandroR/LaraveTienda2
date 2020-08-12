@@ -11,11 +11,8 @@
 <body>
 <div class="container_main">
     <header>
-
   <!-- El logo -->
             <img class="logo" src="{{asset("storage/logo_cpifp-300x116.png")}}" alt="Logo de imágenes"/>
-
-
         <div class="titulo">
             <h1>CPI FP Los Enlaces</h1>
         </div>

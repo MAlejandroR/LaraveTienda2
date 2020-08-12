@@ -12,11 +12,8 @@
 <body>
 <div class="container_main">
     <header>
-
         <!-- El logo -->
         <img class="logo" src="{{asset("storage/logo_cpifp-300x116.png")}}" alt="Logo de imágenes"/>
-
-
         <div class="titulo">
             <h1>CPIFP Los Enlaces</h1>
         </div>
@@ -40,7 +37,6 @@
             @auth
                 <h2>Datos de conectado</h2>
             @endauth
-
         </div>
     </header>
     <nav>
@@ -48,15 +44,10 @@
     </nav>
     <main>
         <h1>Contenido principal</h1>
-
     </main>
     <footer>
         <h1>Pie de página</h1>
     </footer>
-
-
 </div>
-
-
 </body>
 </html>

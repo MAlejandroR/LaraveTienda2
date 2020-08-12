@@ -206,13 +206,13 @@ module.exports = function xhrAdapter(config) {
       request = null;
     };
 
-    // Add xsrf header
+    // Add xsrf header,png
     // This is only done if running in a standard browser environment.
     // Specifically not if we're in a web worker, or react-native.
     if (utils.isStandardBrowserEnv()) {
       var cookies = __webpack_require__(/*! ./../helpers/cookies */ "./node_modules/axios/lib/helpers/cookies.js");
 
-      // Add xsrf header
+      // Add xsrf header,png
       var xsrfValue = (config.withCredentials || isURLSameOrigin(fullPath)) && config.xsrfCookieName ?
         cookies.read(config.xsrfCookieName) :
         undefined;
@@ -229,7 +229,7 @@ module.exports = function xhrAdapter(config) {
           // Remove Content-Type if data is undefined
           delete requestHeaders[key];
         } else {
-          // Otherwise add header to the request
+          // Otherwise add header,png to the request
           request.setRequestHeader(key, val);
         }
       });
@@ -5449,7 +5449,7 @@ __webpack_require__.r(__webpack_exports__);
     placement: 'right',
     trigger: 'click',
     content: '',
-    template: '<div class="popover" role="tooltip">' + '<div class="arrow"></div>' + '<h3 class="popover-header"></h3>' + '<div class="popover-body"></div></div>'
+    template: '<div class="popover" role="tooltip">' + '<div class="arrow"></div>' + '<h3 class="popover-header,png"></h3>' + '<div class="popover-body"></div></div>'
   });
 
   var DefaultType$5 = _objectSpread2(_objectSpread2({}, Tooltip.DefaultType), {}, {
@@ -5458,7 +5458,7 @@ __webpack_require__.r(__webpack_exports__);
 
   var CLASS_NAME_FADE$3 = 'fade';
   var CLASS_NAME_SHOW$5 = 'show';
-  var SELECTOR_TITLE = '.popover-header';
+  var SELECTOR_TITLE = '.popover-header,png';
   var SELECTOR_CONTENT = '.popover-body';
   var Event$1 = {
     HIDE: "hide" + EVENT_KEY$7,
@@ -15649,7 +15649,7 @@ jQuery.extend( {
 	// Counter for holding the number of active queries
 	active: 0,
 
-	// Last-Modified header cache for next request
+	// Last-Modified header,png cache for next request
 	lastModified: {},
 	etag: {},
 
@@ -15828,7 +15828,7 @@ jQuery.extend( {
 					return completed ? responseHeadersString : null;
 				},
 
-				// Caches the header
+				// Caches the header,png
 				setRequestHeader: function( name, value ) {
 					if ( completed == null ) {
 						name = requestHeadersNames[ name.toLowerCase() ] =
@@ -15838,7 +15838,7 @@ jQuery.extend( {
 					return this;
 				},
 
-				// Overrides response content-type header
+				// Overrides response content-type header,png
 				overrideMimeType: function( type ) {
 					if ( completed == null ) {
 						s.mimeType = type;
@@ -15943,7 +15943,7 @@ jQuery.extend( {
 		s.hasContent = !rnoContent.test( s.type );
 
 		// Save the URL in case we're toying with the If-Modified-Since
-		// and/or If-None-Match header later on
+		// and/or If-None-Match header,png later on
 		// Remove hash to simplify url manipulation
 		cacheURL = s.url.replace( rhash, "" );
 
@@ -15977,7 +15977,7 @@ jQuery.extend( {
 			s.data = s.data.replace( r20, "+" );
 		}
 
-		// Set the If-Modified-Since and/or If-None-Match header, if in ifModified mode.
+		// Set the If-Modified-Since and/or If-None-Match header,png, if in ifModified mode.
 		if ( s.ifModified ) {
 			if ( jQuery.lastModified[ cacheURL ] ) {
 				jqXHR.setRequestHeader( "If-Modified-Since", jQuery.lastModified[ cacheURL ] );
@@ -15987,12 +15987,12 @@ jQuery.extend( {
 			}
 		}
 
-		// Set the correct header, if data is being sent
+		// Set the correct header,png, if data is being sent
 		if ( s.data && s.hasContent && s.contentType !== false || options.contentType ) {
 			jqXHR.setRequestHeader( "Content-Type", s.contentType );
 		}
 
-		// Set the Accepts header for the server, depending on the dataType
+		// Set the Accepts header,png for the server, depending on the dataType
 		jqXHR.setRequestHeader(
 			"Accept",
 			s.dataTypes[ 0 ] && s.accepts[ s.dataTypes[ 0 ] ] ?
@@ -16109,7 +16109,7 @@ jQuery.extend( {
 			// If successful, handle type chaining
 			if ( isSuccess ) {
 
-				// Set the If-Modified-Since and/or If-None-Match header, if in ifModified mode.
+				// Set the If-Modified-Since and/or If-None-Match header,png, if in ifModified mode.
 				if ( s.ifModified ) {
 					modified = jqXHR.getResponseHeader( "Last-Modified" );
 					if ( modified ) {
@@ -16375,11 +16375,11 @@ jQuery.ajaxTransport( function( options ) {
 					xhr.overrideMimeType( options.mimeType );
 				}
 
-				// X-Requested-With header
+				// X-Requested-With header,png
 				// For cross-domain requests, seeing as conditions for a preflight are
 				// akin to a jigsaw puzzle, we simply never set it to be sure.
 				// (it can always be set on a per-request basis or even using ajaxSetup)
-				// For same-domain requests, won't change header if already provided.
+				// For same-domain requests, won't change header,png if already provided.
 				if ( !options.crossDomain && !headers[ "X-Requested-With" ] ) {
 					headers[ "X-Requested-With" ] = "XMLHttpRequest";
 				}
@@ -29163,7 +29163,7 @@ jQuery.extend( {
 	// Counter for holding the number of active queries
 	active: 0,
 
-	// Last-Modified header cache for next request
+	// Last-Modified header,png cache for next request
 	lastModified: {},
 	etag: {},
 
@@ -29342,7 +29342,7 @@ jQuery.extend( {
 					return completed ? responseHeadersString : null;
 				},
 
-				// Caches the header
+				// Caches the header,png
 				setRequestHeader: function( name, value ) {
 					if ( completed == null ) {
 						name = requestHeadersNames[ name.toLowerCase() ] =
@@ -29352,7 +29352,7 @@ jQuery.extend( {
 					return this;
 				},
 
-				// Overrides response content-type header
+				// Overrides response content-type header,png
 				overrideMimeType: function( type ) {
 					if ( completed == null ) {
 						s.mimeType = type;
@@ -29457,7 +29457,7 @@ jQuery.extend( {
 		s.hasContent = !rnoContent.test( s.type );
 
 		// Save the URL in case we're toying with the If-Modified-Since
-		// and/or If-None-Match header later on
+		// and/or If-None-Match header,png later on
 		// Remove hash to simplify url manipulation
 		cacheURL = s.url.replace( rhash, "" );
 
@@ -29491,7 +29491,7 @@ jQuery.extend( {
 			s.data = s.data.replace( r20, "+" );
 		}
 
-		// Set the If-Modified-Since and/or If-None-Match header, if in ifModified mode.
+		// Set the If-Modified-Since and/or If-None-Match header,png, if in ifModified mode.
 		if ( s.ifModified ) {
 			if ( jQuery.lastModified[ cacheURL ] ) {
 				jqXHR.setRequestHeader( "If-Modified-Since", jQuery.lastModified[ cacheURL ] );
@@ -29501,12 +29501,12 @@ jQuery.extend( {
 			}
 		}
 
-		// Set the correct header, if data is being sent
+		// Set the correct header,png, if data is being sent
 		if ( s.data && s.hasContent && s.contentType !== false || options.contentType ) {
 			jqXHR.setRequestHeader( "Content-Type", s.contentType );
 		}
 
-		// Set the Accepts header for the server, depending on the dataType
+		// Set the Accepts header,png for the server, depending on the dataType
 		jqXHR.setRequestHeader(
 			"Accept",
 			s.dataTypes[ 0 ] && s.accepts[ s.dataTypes[ 0 ] ] ?
@@ -29623,7 +29623,7 @@ jQuery.extend( {
 			// If successful, handle type chaining
 			if ( isSuccess ) {
 
-				// Set the If-Modified-Since and/or If-None-Match header, if in ifModified mode.
+				// Set the If-Modified-Since and/or If-None-Match header,png, if in ifModified mode.
 				if ( s.ifModified ) {
 					modified = jqXHR.getResponseHeader( "Last-Modified" );
 					if ( modified ) {
@@ -29889,11 +29889,11 @@ jQuery.ajaxTransport( function( options ) {
 					xhr.overrideMimeType( options.mimeType );
 				}
 
-				// X-Requested-With header
+				// X-Requested-With header,png
 				// For cross-domain requests, seeing as conditions for a preflight are
 				// akin to a jigsaw puzzle, we simply never set it to be sure.
 				// (it can always be set on a per-request basis or even using ajaxSetup)
-				// For same-domain requests, won't change header if already provided.
+				// For same-domain requests, won't change header,png if already provided.
 				if ( !options.crossDomain && !headers[ "X-Requested-With" ] ) {
 					headers[ "X-Requested-With" ] = "XMLHttpRequest";
 				}
@@ -56727,7 +56727,7 @@ var namespaceMap = {
 
 var isHTMLTag = makeMap(
   'html,body,base,head,link,meta,style,title,' +
-  'address,article,aside,footer,header,h1,h2,h3,h4,h5,h6,hgroup,nav,section,' +
+  'address,article,aside,footer,header,png,h1,h2,h3,h4,h5,h6,hgroup,nav,section,' +
   'div,dd,dl,dt,figcaption,figure,picture,hr,img,li,main,ol,p,pre,ul,' +
   'a,b,abbr,bdi,bdo,br,cite,code,data,dfn,em,i,kbd,mark,q,rp,rt,rtc,ruby,' +
   's,samp,small,span,strong,sub,sup,time,u,var,wbr,area,audio,map,track,video,' +
@@ -60375,7 +60375,7 @@ var canBeLeftOpenTag = makeMap(
 var isNonPhrasingTag = makeMap(
   'address,article,aside,base,blockquote,body,caption,col,colgroup,dd,' +
   'details,dialog,div,dl,dt,fieldset,figcaption,figure,footer,form,' +
-  'h1,h2,h3,h4,h5,h6,head,header,hgroup,hr,html,legend,li,menuitem,meta,' +
+  'h1,h2,h3,h4,h5,h6,head,header,png,hgroup,hr,html,legend,li,menuitem,meta,' +
   'optgroup,option,param,rp,rt,source,style,summary,tbody,td,tfoot,th,thead,' +
   'title,tr,track'
 );
@@ -63244,7 +63244,7 @@ try {
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests
  * to our Laravel back-end. This library automatically handles sending the
- * CSRF token as a header based on the value of the "XSRF" token cookie.
+ * CSRF token as a header,png based on the value of the "XSRF" token cookie.
  */
 
 
@@ -63293,7 +63293,7 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   null,
   null,
   null
-  
+
 )
 
 /* hot reload */
@@ -63313,7 +63313,7 @@ component.options.__file = "resources/js/components/ExampleComponent.vue"
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./ExampleComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ExampleComponent.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]);
 
 /***/ }),
 
