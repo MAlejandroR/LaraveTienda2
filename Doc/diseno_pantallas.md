@@ -10,8 +10,9 @@ Rehacemos la práctica de la tienda usando laravel y vamos especificando requisi
 
 ![Menú de navegaci&#xF3](./../public/imagenes/imagenes_apuntes/diagrama_navegacion.png)
 
- En __color rojo__  se representan aquellas pantallas o recursos que requieren estar logueado para acceder a ellas
- En cualquiere de ellas podremos desloguearnos
+En __color rojo__  se representan aquellas pantallas o recursos que requieren estar logueado para acceder a ellas
+
+En cualquier de ellas podremos desloguearnos
 
 __A continuación vamos a ver los mockups o diseño de las pantallas__
 
@@ -23,27 +24,20 @@ Realizamos la siguiente propuesta de las diferentes pantallas:
   * Y la pantalla principal si estamos conectado
    ![Pantalla principal conectado](./../public/imagenes/imagenes_apuntes/pantallas_mokups/Layout_usuario_conectado.png) 
 * Pantalla de __contacta__
-
    ![Pantalla principal conectado](./../public/imagenes/imagenes_apuntes/pantallas_mokups/contacta.png) 
 * Pantalla de __conocenos__
-
    ![Pantalla principal conectado](./../public/imagenes/imagenes_apuntes/pantallas_mokups/conocenos.png) 
 * Pantalla de __tienda__
-
    ![Pantalla principal conectado](./../public/imagenes/imagenes_apuntes/pantallas_mokups/tienda.png) 
 * Pantalla de __pagar__
    ![Pantalla principal conectado](./../public/imagenes/imagenes_apuntes/pantallas_mokups/pagar.png) 
 * Pantalla de __imprimir factura__
-
    ![Pantalla principal conectado](./../public/imagenes/imagenes_apuntes/pantallas_mokups/factura.png) 
-
-
-
 
 ## Layout 
 
- Esta pantalla va a ser la base e todas las pantallas y corresponde al siguiente diseño
- Realizamos un típico diseño de 4 secciones. Especificamos el porcentaje en altura decidio para cada sección.
+Esta pantalla va a ser la base e todas las pantallas y corresponde al siguiente diseño
+Realizamos un típico diseño de 4 secciones. Especificamos el porcentaje en altura decidio para cada sección.
  * __header__ 15%: común en todas las páginas
  * __nav__   5%: (Menú de cabecera) común en todas las páginas
  * __main__   70% Cambiará según pantalla
@@ -53,7 +47,7 @@ Realizamos la siguiente propuesta de las diferentes pantallas:
  creamos el fichero __1.css__, según avancemos crearemos nuevos ficheros css, manteniendo los anteriores para poder visualizar cada parte intermedia del proyecto.
  
 <code>
-  
+ 
      .container_main {
           /*clase para la caja global => header(cabecera) + nav (menú de navegacin) + main(Cuerpo ppal)+
         footer (pie de la página) */

@@ -44,35 +44,7 @@ Usamos balsamiq para el diseño gráfico [Cómo usar balsamiq en ubuntu](https:/
 Una vez ejecutado el comando, nos mostrará un menú para installar __balsamiq__.
 
 Instalará Lutrix, Wine y finalmente, en el entorno wine, instalará balsamiq, y se nos quedará instalado en el sistema
-#### Página principal
 
-![P&#xE1;gina principal o layout no conectado](.gitbook/assets/Layout_usuario_no_conectado%20%281%29.png)
-
-Aquí vemos una sección de cabecera, un menú, un contendio y un pie de página Si el usuario estuviera conectado sólo cambiará el menú superior ![P&#xE1;gina principal o layout usuario conectado](.gitbook/assets/Layout_usuario_conectado%20%281%29.png)
-
-**Página de tienda**
-
-En esta página solo se puede acceder si se está conectado. ![P&#xE1;gina principal o layout usuario conectado](.gitbook/assets/tienda.png)
-
-**Página de imprimir**
-
-En esta página solo se puede acceder si se está conectado. ![P&#xE1;gina para imprimir la factura](https://github.com/MAlejandroR/LaravelTienda/tree/1b4278626b64cab9d492909f7a95488309b37064/storage/imagenes/mockups/imprimir.png)
-
-**Página de pagar**
-
-En esta página solo se puede acceder si se está conectado. ![P&#xE1;gina para pagar](.gitbook/assets/pagar%20%281%29.png)
-
-**Página contacta**
-
-En esta página solo se puede acceder si se está conectado. ![P&#xE1;gina para contactar/enviar mensaje](https://github.com/MAlejandroR/LaravelTienda/tree/1b4278626b64cab9d492909f7a95488309b37064/storage/imagenes/mockups/contacta.png)
-
-**Página conocenos**
-
-![P&#xE1;gina de conocenos](https://github.com/MAlejandroR/LaravelTienda/tree/1b4278626b64cab9d492909f7a95488309b37064/storage/imagenes/mockups/conocenos.png)
-
-**Página registrarse**
-
-![P&#xE1;gina para registrarse](https://github.com/MAlejandroR/LaravelTienda/tree/1b4278626b64cab9d492909f7a95488309b37064/storage/imagenes/mockups/resgistrarse.png)
 
 ### Cargar Bootstrap en el proyecto
 
