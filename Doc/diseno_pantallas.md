@@ -11,7 +11,7 @@ Rehacemos la práctica de la tienda usando laravel y vamos especificando requisi
 ![Menú de navegaci&#xF3](./../public/imagenes/imagenes_apuntes/diagrama_navegacion.png)
 
  En __color rojo__  se representan aquellas pantallas o recursos que requieren estar logueado para acceder a ellas
- En cualquiere de ellas podremos desloguearse
+ En cualquiere de ellas podremos desloguearnos
 
 __A continuación vamos a ver los mockups o diseño de las pantallas__
 
