@@ -36,9 +36,14 @@ Abordamos el proyecto desde los siguientes items
 ### Diseño de la interfaz gráfica
 
 Usamos balsamiq para el diseño gráfico [Cómo usar balsamiq en ubuntu](https://github.com/balsamiq/balsamiq-wireframes-linux) descargamos y ejecutamos con el siguiente comando:
+<code>
 
- `get` [`https://raw.githubusercontent.com/balsamiq/balsamiq-wireframes-linux/master/bw.yml`](https://raw.githubusercontent.com/balsamiq/balsamiq-wireframes-linux/master/bw.yml) `-O /tmp/bw.yml && lutris -i /tmp/bw.yml`
+ `wget` [`https://raw.githubusercontent.com/balsamiq/balsamiq-wireframes-linux/master/bw.yml`](https://raw.githubusercontent.com/balsamiq/balsamiq-wireframes-linux/master/bw.yml) `-O /tmp/bw.yml && lutris -i /tmp/bw.yml`
+</code>
 
+Una vez ejecutado el comando, nos mostrará un menú para installar __balsamiq__.
+
+Instalará Lutrix, Wine y finalmente, en el entorno wine, instalará balsamiq, y se nos quedará instalado en el sistema
 #### Página principal
 
 ![P&#xE1;gina principal o layout no conectado](.gitbook/assets/Layout_usuario_no_conectado%20%281%29.png)

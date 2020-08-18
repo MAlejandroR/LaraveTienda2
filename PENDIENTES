@@ -1,0 +1,16 @@
+1.- Terminar de documetar el diseño de pantallas
+   1.- Diseño de mockups con balsamiq   .
+   2.- Diseño de navegación.
+   3.- Realización de plantillas blade con css y un poco de bootstrap.
+   4.- Pasar el css con sass y con las clases de bootstrap. (POSPUESTO)
+   5.- Usar Vue (bootstrap con vue y vuetyfy... (Esto hay que probarlo). (POSPUESTO)
+2.- Crear el loguin y que funcione en pantallas
+3.- Cargar la base de datos con funker de productos-tiendas. Deseable con imágenes de los productos
+4.- Gestionar la cesta
+5.- Pagar (página)
+6.- Paypall para el pago
+7.- Imprimir factura
+    1.- Probar con dompdf
+    2.- Probar con FPDF
+FIN DE PROYETO
+ap311 - 5602F

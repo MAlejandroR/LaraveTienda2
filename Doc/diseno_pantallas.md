@@ -15,6 +15,31 @@ Rehacemos la práctica de la tienda usando laravel y vamos especificando requisi
 
 __A continuación vamos a ver los mockups o diseño de las pantallas__
 
+## Diseño con balsamiq
+Realizamos la siguiente propuesta de las diferentes pantallas:
+* Pantalla __princial__
+  * Tendremos la pantalla sin estar conectado
+  ![Pantalla principal conectado](./../public/imagenes/imagenes_apuntes/pantallas_mokups/Layout_usuario_no_conectado.png)
+  * Y la pantalla principal si estamos conectado
+   ![Pantalla principal conectado](./../public/imagenes/imagenes_apuntes/pantallas_mokups/Layout_usuario_conectado.png) 
+* Pantalla de __contacta__
+
+   ![Pantalla principal conectado](./../public/imagenes/imagenes_apuntes/pantallas_mokups/contacta.png) 
+* Pantalla de __conocenos__
+
+   ![Pantalla principal conectado](./../public/imagenes/imagenes_apuntes/pantallas_mokups/conocenos.png) 
+* Pantalla de __tienda__
+
+   ![Pantalla principal conectado](./../public/imagenes/imagenes_apuntes/pantallas_mokups/tienda.png) 
+* Pantalla de __pagar__
+   ![Pantalla principal conectado](./../public/imagenes/imagenes_apuntes/pantallas_mokups/pagar.png) 
+* Pantalla de __imprimir factura__
+
+   ![Pantalla principal conectado](./../public/imagenes/imagenes_apuntes/pantallas_mokups/factura.png) 
+
+
+
+
 ## Layout 
 
  Esta pantalla va a ser la base e todas las pantallas y corresponde al siguiente diseño
@@ -159,20 +184,24 @@ En el ficheros de rutas creamos por comodidad la ruta __1.php__
   * Sección de logueo o de información de usuario logueado
   ![Secciones del header](./../public/imagenes/imagenes_apuntes/pantallas_mokups/header_block.png)
    
-   En ella vamos a establecer un  login, un título y una sección para menú de login o bien nombre de usuario logueado.
-   Establecemos pues tres secciones distribuidas horizontalmente como mostramos en la siguiente imagen
-  #### Logo
-   Vamos a usar la imagen del cpifp los enlaces. La descargo de la página oficial 
-      http://www.cpilosenlaces.com/wp-content/uploads/2014/11/logo_cpifp-300x116.png
-    Guardo la imagen en un subdirectorio del dir __storage__.
-    Este directorio, como no está en la carpeta public, se debe de hacer un enlace directo a la carpeta public para tenerlo disponible.
-    Existe un comando que crea directamente el enlace directo   https://laravel.com/docs/7.x/filesystem#the-public-disk
+ En ella vamos a establecer un  login, un título y una sección para menú de login o bien nombre de usuario logueado.
+ 
+ Establecemos pues tres secciones distribuidas horizontalmente como mostramos en la siguiente imagen
+ #### Logo
+ Vamos a usar la imagen del cpifp los enlaces. La descargo de la página oficial 
+      [Imagen logo de los enlaces](http://www.cpilosenlaces.com/wp-content/uploads/2014/11/logo_cpifp-300x116.png)
+      
+Guardo la imagen en un subdirectorio del dir __storage__.
+
+Este directorio, como no está en la carpeta public, se debe de hacer un enlace directo a la carpeta public para tenerlo disponible.
+
+Existe un comando que crea directamente el enlace directo   [Documentación laravel sobre link de storage](https://laravel.com/docs/7.x/filesystem#the-public-disk)
 
 <code>
 
-     php artisan storage:link
+    php artisan storage:link
 </code>
-Le damos un poco de estilo para que no se salga de su contenedor __header__ si redimensionamos y para que esté alineado a la izquierda
+Le damos un poco de estilo para que no se salga de su contenedor __header__ si redimensionamos y para que esté alineado a la izquierda (ver public/css/2.css)
 <code>
 
     header >.logo{
@@ -343,6 +372,8 @@ Todos estos aspectos se considerarán en la sección de autentificación.
  
     Esta sería la imagen del layout inicial
  ### Menú
+ 
+ 
  ### Main
  ### footer
     
