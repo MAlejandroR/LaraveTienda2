@@ -1,12 +1,19 @@
-# DISEÑO DE PANTALLAS
+# MEnú de navegación
 
  [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework) [![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework) [![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework) [![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
 
 ## LaravelTienda : Diseño de pantallas
 
-Rehacemos la práctica de la tienda usando laravel y vamos especificando requisitos e implementación
+Rehacemos la práctica de la tienda usando laravel y vamos especificando requisitos e implementación.
 
-## Planteamos el siguiente menú de navegación
+Para el diseño de pantalla vamos a realizar una serie de diagramas:
+* Menú de navegación
+* Diseño de las pantallas con __balsamiq__
+* Creación del layout __(css- html)__ de la aplicación e identificación de las __secciones__
+* Creación de las secciones __(css_html)__  
+
+## Menú de navegación
+Planteamos el siguiente menú de navegación, donde cada uso representa un pantalla
 
 ![Menú de navegaci&#xF3](./../public/imagenes/imagenes_apuntes/diagrama_navegacion.png)
 

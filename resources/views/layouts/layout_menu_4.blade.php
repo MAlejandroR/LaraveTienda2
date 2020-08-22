@@ -44,9 +44,9 @@
         </div>
     </header>
     <nav class="menu">
-        <a  class="rojo" href="#">Tienda</a>
-        <a  class="verde" href="#">Conócenos</a>
-        <a  class="azul" href="#">Contacta</a>
+            <a class="rojo" href="#">Tienda</a>
+            <a class="verde" href="#">Conócenos</a>
+            <a class="azul" href="{{route("rellena")}}">Contacta</a>
     </nav>
     <main>
         @yield("contenido")

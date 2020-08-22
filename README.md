@@ -23,8 +23,7 @@ Para ello rehacemos la práctica de la _tienda_ usando __laravel__ y vamos espec
 ```
 #Documentanción del desarrollo del proyecto
 Abordamos el proyecto desde los siguientes items
-* [Diseño de pantallas](./Doc/diseno_pantallas.md)
-* [Creación de la pantallas blade]()
+* [Diseño de la interfaz gráfica](./Doc/diseno_interfaz_grafica.md)
 * [Autentificación o autenticacion]()
 * [Creación de rutas]()
 * [Creación de bases de datos y su población](./Doc/base_datos.md)

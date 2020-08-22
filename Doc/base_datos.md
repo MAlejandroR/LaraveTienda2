@@ -22,11 +22,11 @@ Ahora actualizamos la migración para cargar los campos que deseamos (Ver ficher
       public function up()
         {
             Schema::create('productos', function (Blueprint $table) {
+                $table->id();
                 $table->string("nombre");
                 $table->string("descripcion");
                 $table->string("imagen");
                 $table->float("pvp");
-                $table->id();
                 $table->timestamps();
             });
         }

@@ -19,6 +19,8 @@ Route::view("3", "layouts/layout3");
 Route::view("4menu", "layouts/layout_menu_4");
 Route::view("5main", "p5_main");
 Route::view("5", "p5_main");
+Route::get("rellena", "Utilidades@rellena_imagenes")->name("rellena");
+
 /*
 Route::get('/', function () {
     return view('paginas.login');
